@@ -18,11 +18,11 @@ public class Animal {
     }
 
     public void eat(){
-        System.out.println("the animal eat has been called");
+        System.out.println("the Animal.eat() has been called");
     }
 
-    public void move(){
-        System.out.println("the animal move has been called");
+    public void move(int speed){
+        System.out.println("Animal.move() is moving at "+ speed);
     }
 
     public String getName() {

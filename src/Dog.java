@@ -26,6 +26,28 @@ public class Dog extends Animal {
     public void eat() {
         System.out.println("Dog.eat() called");
         chew();
+        //if one uses super, then it always points to the method in the super class, should u override that for this specific class, it will still refer to the super class
         super.eat();
+    }
+
+    public void walk(){
+        System.out.println("Dog.walk() called");
+        move(5);
+    }
+
+    public void run(){
+        System.out.println("Dog.run() called");
+        move(10);
+    }
+
+    private void moveLegs(int speed){
+        System.out.println("Dog.moveLegs() called");
+    }
+
+    @Override
+    public void move(int speed) {
+        System.out.println("Dog.move() called");
+        moveLegs(speed);
+        super.move(speed);
     }
 }
